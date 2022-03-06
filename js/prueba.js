@@ -1,10 +1,5 @@
 alert("Bienvenidos a AcaCcomeRico");
 
-let ordenComida;
-let ordenBebida;
-let ordenPostre;
-let contador = 0;
-
 const categorias = ["DESAYUNO Y MERIENDA ", "ALMUERZO Y CENA ", "POSTRES ", "BEBIDAS "];
 
 console.log("Tenemos " + categorias.length + " Categorias en el menú\n" + categorias);
@@ -17,7 +12,10 @@ class Lista {
         this.category = category;
     }   
 }
-
+let comida;
+let bebida;
+let postre;
+let contador = 0;
 let listaProductosMenu = "Estos son nuestros productos";
 
 const listaProductos = [];
@@ -59,7 +57,6 @@ function realizarOtraOrden(){
     let continuar = prompt("Quiere realizar otra orden?\nsi/no");
     switch (continuar) {
         case "si":
-            listarProductos();
             orden();
         case "no":
             alert("Su orden estara lista en 15 minutos");
@@ -68,9 +65,9 @@ function realizarOtraOrden(){
 }
 
 function orden() {
-    ordenComida = prompt("Que desea pedir para Comer?");
-    ordenBebida = prompt("Que desea pedir para Beber?");
-    ordenPostre = prompt("Que desea pedir de postre?");
+    let ordenComida = prompt("Que desea pedir para Comer?");
+    let ordenBebida = prompt("Que desea pedir para Beber?");
+    let ordenPostre = prompt("Que desea pedir de postre?");
     console.log("Orden a preparar " + ordenComida, ordenBebida, ordenPostre);
 
     encontrarOrden();
@@ -91,7 +88,9 @@ for (const producto of listaProductos) {
 }
 
 function menu() {
+
     let opcion = prompt("Menu: \n1 - Ver productos\nESC - Para Salir");
+
     switch (opcion) {
 
         case "1":
@@ -121,5 +120,4 @@ function menu() {
     }
 }
 
-menu();
-
+menu(); 
