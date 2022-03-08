@@ -48,7 +48,6 @@ listaProductos.push(new Lista(12, "coca cola", 170, categorias[3], "./img/cocaCo
 listaProductos.push(new Lista(13, "sprite", 170, categorias[3], "./img/sprite.jpg"));
 
 function total(){
-
     comida.sumarIva();
 
     bebida.sumarIva();
@@ -62,7 +61,6 @@ function total(){
 }
 
 function encontrarOrden() {
-
     comida = listaProductos.find(producto => producto.nombre == ordenComida.toLowerCase());
 
     bebida = listaProductos.find(producto => producto.nombre == ordenBebida.toLowerCase());
@@ -83,7 +81,6 @@ function encontrarOrden() {
 }
 
 function realizarOtraOrden(){
-
     let continuar = prompt("Quiere realizar otra orden?\nsi/no");
 
     switch (continuar) {
@@ -132,7 +129,6 @@ for (const producto of listaProductos) {
 }
 
 function menu() {
-
     let opcion = prompt("Menu: \n1 - Ver productos\nESC - Para Salir");
 
     switch (opcion) {
